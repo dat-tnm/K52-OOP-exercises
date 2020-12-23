@@ -50,7 +50,6 @@
             this.ps1TuSo.Name = "ps1TuSo";
             this.ps1TuSo.Size = new System.Drawing.Size(54, 20);
             this.ps1TuSo.TabIndex = 0;
-            this.ps1TuSo.TextChanged += new System.EventHandler(this.ps1TuSo_TextChanged);
             // 
             // ps1MauSo
             // 
@@ -58,7 +57,6 @@
             this.ps1MauSo.Name = "ps1MauSo";
             this.ps1MauSo.Size = new System.Drawing.Size(54, 20);
             this.ps1MauSo.TabIndex = 1;
-            this.ps1MauSo.TextChanged += new System.EventHandler(this.ps1MauSo_TextChanged);
             // 
             // ps2TuSo
             // 
@@ -66,7 +64,6 @@
             this.ps2TuSo.Name = "ps2TuSo";
             this.ps2TuSo.Size = new System.Drawing.Size(54, 20);
             this.ps2TuSo.TabIndex = 2;
-            this.ps2TuSo.TextChanged += new System.EventHandler(this.ps2TuSo_TextChanged);
             // 
             // ps2MauSo
             // 
@@ -74,7 +71,6 @@
             this.ps2MauSo.Name = "ps2MauSo";
             this.ps2MauSo.Size = new System.Drawing.Size(54, 20);
             this.ps2MauSo.TabIndex = 3;
-            this.ps2MauSo.TextChanged += new System.EventHandler(this.ps2MauSo_TextChanged);
             // 
             // label1
             // 
@@ -112,6 +108,7 @@
             this.minusBtn.TabIndex = 7;
             this.minusBtn.Text = "-";
             this.minusBtn.UseVisualStyleBackColor = true;
+            this.minusBtn.Click += new System.EventHandler(this.minusBtn_Click);
             // 
             // multiplyBtn
             // 
@@ -121,6 +118,7 @@
             this.multiplyBtn.TabIndex = 8;
             this.multiplyBtn.Text = "x";
             this.multiplyBtn.UseVisualStyleBackColor = true;
+            this.multiplyBtn.Click += new System.EventHandler(this.multiplyBtn_Click);
             // 
             // divideBtn
             // 
@@ -130,6 +128,7 @@
             this.divideBtn.TabIndex = 9;
             this.divideBtn.Text = "/";
             this.divideBtn.UseVisualStyleBackColor = true;
+            this.divideBtn.Click += new System.EventHandler(this.divideBtn_Click);
             // 
             // label3
             // 
@@ -162,6 +161,7 @@
             this.Lammoi.TabIndex = 13;
             this.Lammoi.Text = "Lam moi";
             this.Lammoi.UseVisualStyleBackColor = true;
+            this.Lammoi.Click += new System.EventHandler(this.Lammoi_Click);
             // 
             // Form1
             // 

@@ -34,7 +34,7 @@ namespace WindowsFormsApp1
                     uscln = i;
                 }
             }
-            return new PhanSo(t, m);
+            return new PhanSo(t/uscln, m/uscln);
         }
 
         public PhanSo Nhan(PhanSo ps)
@@ -46,8 +46,8 @@ namespace WindowsFormsApp1
 
         public PhanSo Chia(PhanSo ps)
         {
-            int t = TuSo * ps.TuSo;
-            int m = MauSo * ps.MauSo;
+            int t = TuSo * ps.MauSo;
+            int m = MauSo * ps.TuSo;
            return RutGon(t, m);
         }
 
