@@ -40,8 +40,12 @@ namespace WindowsFormsApp1
             if (ps1.MauSo == 0 || ps2.MauSo == 0)
             {
                 DialogResult result = MessageBox.Show("Mẫu không được bằng 0 !", "Lỗi đầu vào", MessageBoxButtons.OK, MessageBoxIcon.Hand, MessageBoxDefaultButton.Button2, MessageBoxOptions.ServiceNotification);
+                
+                ps1MauSo.BackColor = Color.Red;
                 return false;
             }
+
+
 
             return true;
         }
@@ -105,6 +109,11 @@ namespace WindowsFormsApp1
             ps1.MauSo = 0;
             ps2.TuSo = 0;
             ps2.MauSo = 0;
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

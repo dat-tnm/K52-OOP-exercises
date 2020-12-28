@@ -41,21 +41,21 @@ namespace WindowsFormsApp1
         {
             int t = TuSo * ps.TuSo;
             int m = MauSo * ps.MauSo;
-           return RutGon(t, m);
+            return RutGon(t, m);
         }
 
         public PhanSo Chia(PhanSo ps)
         {
             int t = TuSo * ps.MauSo;
             int m = MauSo * ps.TuSo;
-           return RutGon(t, m);
+            return RutGon(t, m);
         }
 
         public PhanSo Cong(PhanSo ps)
         {
             int t = TuSo * ps.MauSo + MauSo * ps.TuSo;
             int m = MauSo * ps.MauSo;
-           return RutGon(t, m);
+            return RutGon(t, m);
         }
 
         public PhanSo Tru(PhanSo ps)
