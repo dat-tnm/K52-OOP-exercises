@@ -12,52 +12,61 @@ namespace Stack
 {
     public partial class Form1 : Form
     {
-        int item;
+        int input;
         bool isValidInput = true;
         MyStack stack1, stack2, stack3;
 
         public Form1()
         {
             InitializeComponent();
+
+            stack1 = new MyStack();
         }
 
         private void Form1_Load(object sender, EventArgs e)
-        {
-            stack1 = new MyStack();
-            stack2 = new MyStack();
-            stack3 = new MyStack();
+        { }
 
-            listView1.Columns.Add("Index");
-            listView1.Columns.Add("Item");
-            listView2.Columns.Add("Index");
-            listView2.Columns.Add("Item");
-            listView3.Columns.Add("Index");
-            listView3.Columns.Add("Item");
-        }
-        
 
-        private void btnPop_Click(object sender, EventArgs e)
+        private void btnHeSo2_Click(object sender, EventArgs e)
         {
-            stack1.Pop();
-            listView1.Items.Clear();
-            listView1.Items.Add(new ListViewItem(stack1.ItemsToString()));
-        }
-
-        private void btnPush_Click(object sender, EventArgs e)
-        {
-            ConvertInput();
-            if (isValidInput == false)
-            {
+            ConvertInputToInt();
+            if (!isValidInput)
                 return;
+
+            if (input == 0)
+            {
+                stack1.Push(input);
             }
-            stack1.Push(item);
-            listView1.Items.Clear();
-            listView1.Items.Add(new ListViewItem(stack1.ItemsToString()));
+
+            int item;
+            while (input >= 1)
+            {
+                item = input % 2;
+                input = input / 2;
+                stack1.Push(item);
+            }          
+
+            while (!stack1.isEmpty())
+            {
+                textResult.Text += stack1.Peek();
+                stack1.Pop();
+            }
         }
 
-        private void ConvertInput()
+        private void btnHeSo8_Click(object sender, EventArgs e)
         {
-            if (!int.TryParse(textItem.Text, out item))
+
+        }
+
+        private void btnHeSo16_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ConvertInputToInt()
+        {
+            textResult.Clear();
+            if (!int.TryParse(textInput.Text, out input))
             {
                 MessageBox.Show("Item phải là kiểu int", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 isValidInput = false;

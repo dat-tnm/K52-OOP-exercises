@@ -28,129 +28,100 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.listView1 = new System.Windows.Forms.ListView();
-            this.listView2 = new System.Windows.Forms.ListView();
-            this.listView3 = new System.Windows.Forms.ListView();
-            this.textItem = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.btnPop = new System.Windows.Forms.Button();
-            this.btnPush = new System.Windows.Forms.Button();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
+            this.label2 = new System.Windows.Forms.Label();
+            this.textInput = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.textResult = new System.Windows.Forms.TextBox();
+            this.btnHeSo2 = new System.Windows.Forms.Button();
+            this.btnHeSo16 = new System.Windows.Forms.Button();
+            this.btnHeSo8 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // listView1
+            // label2
             // 
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(43, 32);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(121, 175);
-            this.listView1.TabIndex = 0;
-            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(99, 29);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(31, 13);
+            this.label2.TabIndex = 9;
+            this.label2.Text = "Input";
             // 
-            // listView2
+            // textInput
             // 
-            this.listView2.HideSelection = false;
-            this.listView2.Location = new System.Drawing.Point(331, 32);
-            this.listView2.Name = "listView2";
-            this.listView2.Size = new System.Drawing.Size(121, 175);
-            this.listView2.TabIndex = 1;
-            this.listView2.UseCompatibleStateImageBehavior = false;
+            this.textInput.Location = new System.Drawing.Point(157, 26);
+            this.textInput.Name = "textInput";
+            this.textInput.Size = new System.Drawing.Size(100, 20);
+            this.textInput.TabIndex = 10;
             // 
-            // listView3
+            // label3
             // 
-            this.listView3.HideSelection = false;
-            this.listView3.Location = new System.Drawing.Point(607, 32);
-            this.listView3.Name = "listView3";
-            this.listView3.Size = new System.Drawing.Size(121, 175);
-            this.listView3.TabIndex = 2;
-            this.listView3.UseCompatibleStateImageBehavior = false;
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(511, 29);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(37, 13);
+            this.label3.TabIndex = 11;
+            this.label3.Text = "Result";
             // 
-            // textItem
+            // textResult
             // 
-            this.textItem.Location = new System.Drawing.Point(122, 308);
-            this.textItem.Name = "textItem";
-            this.textItem.Size = new System.Drawing.Size(100, 20);
-            this.textItem.TabIndex = 3;
+            this.textResult.Location = new System.Drawing.Point(558, 29);
+            this.textResult.Name = "textResult";
+            this.textResult.Size = new System.Drawing.Size(100, 20);
+            this.textResult.TabIndex = 12;
             // 
-            // label1
+            // btnHeSo2
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(71, 308);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(27, 13);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "Item";
+            this.btnHeSo2.Location = new System.Drawing.Point(350, 27);
+            this.btnHeSo2.Name = "btnHeSo2";
+            this.btnHeSo2.Size = new System.Drawing.Size(75, 23);
+            this.btnHeSo2.TabIndex = 13;
+            this.btnHeSo2.Text = "/2Convert";
+            this.btnHeSo2.UseVisualStyleBackColor = true;
+            this.btnHeSo2.Click += new System.EventHandler(this.btnHeSo2_Click);
             // 
-            // btnPop
+            // btnHeSo16
             // 
-            this.btnPop.Location = new System.Drawing.Point(247, 271);
-            this.btnPop.Name = "btnPop";
-            this.btnPop.Size = new System.Drawing.Size(75, 23);
-            this.btnPop.TabIndex = 7;
-            this.btnPop.Text = "Pop";
-            this.btnPop.UseVisualStyleBackColor = true;
-            this.btnPop.Click += new System.EventHandler(this.btnPop_Click);
+            this.btnHeSo16.Location = new System.Drawing.Point(350, 124);
+            this.btnHeSo16.Name = "btnHeSo16";
+            this.btnHeSo16.Size = new System.Drawing.Size(75, 23);
+            this.btnHeSo16.TabIndex = 14;
+            this.btnHeSo16.Text = "/16Convert";
+            this.btnHeSo16.UseVisualStyleBackColor = true;
+            this.btnHeSo16.Click += new System.EventHandler(this.btnHeSo16_Click);
             // 
-            // btnPush
+            // btnHeSo8
             // 
-            this.btnPush.Location = new System.Drawing.Point(247, 308);
-            this.btnPush.Name = "btnPush";
-            this.btnPush.Size = new System.Drawing.Size(75, 23);
-            this.btnPush.TabIndex = 8;
-            this.btnPush.Text = "Push";
-            this.btnPush.UseVisualStyleBackColor = true;
-            this.btnPush.Click += new System.EventHandler(this.btnPush_Click);
+            this.btnHeSo8.Location = new System.Drawing.Point(350, 72);
+            this.btnHeSo8.Name = "btnHeSo8";
+            this.btnHeSo8.Size = new System.Drawing.Size(75, 23);
+            this.btnHeSo8.TabIndex = 15;
+            this.btnHeSo8.Text = "/8Convert";
+            this.btnHeSo8.UseVisualStyleBackColor = true;
+            this.btnHeSo8.Click += new System.EventHandler(this.btnHeSo8_Click);
             // 
-            // radioButton1
+            // button1
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(58, 213);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(85, 17);
-            this.radioButton1.TabIndex = 9;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "radioButton1";
-            this.radioButton1.UseVisualStyleBackColor = true;
-            // 
-            // radioButton2
-            // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(349, 213);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(85, 17);
-            this.radioButton2.TabIndex = 10;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "radioButton2";
-            this.radioButton2.UseVisualStyleBackColor = true;
-            // 
-            // radioButton3
-            // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(628, 213);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(85, 17);
-            this.radioButton3.TabIndex = 11;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "radioButton3";
-            this.radioButton3.UseVisualStyleBackColor = true;
+            this.button1.Location = new System.Drawing.Point(350, 162);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 16;
+            this.button1.Text = "/10Convert";
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.radioButton3);
-            this.Controls.Add(this.radioButton2);
-            this.Controls.Add(this.radioButton1);
-            this.Controls.Add(this.btnPush);
-            this.Controls.Add(this.btnPop);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.textItem);
-            this.Controls.Add(this.listView3);
-            this.Controls.Add(this.listView2);
-            this.Controls.Add(this.listView1);
+            this.ClientSize = new System.Drawing.Size(800, 197);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnHeSo8);
+            this.Controls.Add(this.btnHeSo16);
+            this.Controls.Add(this.btnHeSo2);
+            this.Controls.Add(this.textResult);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.textInput);
+            this.Controls.Add(this.label2);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -160,17 +131,14 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.ListView listView1;
-        private System.Windows.Forms.ListView listView2;
-        private System.Windows.Forms.ListView listView3;
-        private System.Windows.Forms.TextBox textItem;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnPop;
-        private System.Windows.Forms.Button btnPush;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox textInput;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox textResult;
+        private System.Windows.Forms.Button btnHeSo2;
+        private System.Windows.Forms.Button btnHeSo16;
+        private System.Windows.Forms.Button btnHeSo8;
+        private System.Windows.Forms.Button button1;
     }
 }
 

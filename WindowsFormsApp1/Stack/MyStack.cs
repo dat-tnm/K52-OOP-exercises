@@ -10,7 +10,7 @@ namespace Stack
     class MyStack
     {
         int size = 100;
-        int top = 0;
+        int top = -1;
 
         public int[] items;
 
@@ -27,12 +27,12 @@ namespace Stack
 
         public bool isEmpty()
         {
-            return top == 0 ? true : false;
+            return top < 0 ? true : false;
         }
 
         public bool isFull()
         {
-            return top == size ? true : false;
+            return top == (size - 1) ? true : false;
         }
 
         public void Push(int item)
@@ -51,7 +51,7 @@ namespace Stack
             top--;
         }
 
-        int peek()
+        public int Peek()
         {
             return items[top];
         }
