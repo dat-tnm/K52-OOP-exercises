@@ -5,18 +5,23 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Collections;
 
-namespace MyStack
+namespace Stack
 {
     class MyStack
     {
         int size = 100;
         int top = 0;
 
-        private int[] stack;
+        public int[] items;
+
+        public string[] ItemsToString()
+        {
+            return Array.ConvertAll(items, i => i.ToString());
+        }
 
         public MyStack()
         {
-            stack = new int[size];
+            items = new int[size];
         }
 
 
@@ -35,20 +40,20 @@ namespace MyStack
             if (isFull())
                 return;
             top++;
-            stack[top] = item;
+            items[top] = item;
         }
 
         public void Pop()
         {
             if (isEmpty())
                 return;
-            stack[top] = 0;
+            items[top] = 0;
             top--;
         }
 
         int peek()
         {
-            return stack[top];
+            return items[top];
         }
     }
 }
