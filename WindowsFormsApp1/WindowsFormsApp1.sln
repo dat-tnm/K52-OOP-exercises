@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyStack", "Stack\MyStack.cs
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Game_ThapHaNoi", "Game_ThapHaNoi\Game_ThapHaNoi.csproj", "{F7FC9596-DB8E-4EB7-98A4-4A277F0C4170}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HeThongATM", "HeThongATM\HeThongATM.csproj", "{8E47E3A5-A5D2-4F4D-B5EE-37A9AF53E228}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{F7FC9596-DB8E-4EB7-98A4-4A277F0C4170}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F7FC9596-DB8E-4EB7-98A4-4A277F0C4170}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F7FC9596-DB8E-4EB7-98A4-4A277F0C4170}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8E47E3A5-A5D2-4F4D-B5EE-37A9AF53E228}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8E47E3A5-A5D2-4F4D-B5EE-37A9AF53E228}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8E47E3A5-A5D2-4F4D-B5EE-37A9AF53E228}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8E47E3A5-A5D2-4F4D-B5EE-37A9AF53E228}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
