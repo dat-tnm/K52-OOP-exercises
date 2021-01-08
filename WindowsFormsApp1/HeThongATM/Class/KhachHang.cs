@@ -16,19 +16,17 @@ namespace HeThongATM.Class
         }
 
         public string MaThe { get; private set; }
-        public string MaPin { get; private set; }
+        public string MaPin { get; set; }
         public int SoDu { get; private set; }
 
-        public bool RutTien(int amount, ref string message)
+        public void TruTien(int amount)
         {
-            if (amount % 50000 != 0)
-                return false;
-
-            if (amount - SoDu < 50000)
-                return false;
-
             SoDu -= amount;
-            return true;
+        }
+
+        public void ThemTien(int amount)
+        {
+            SoDu -= amount;
         }
     }
 }
