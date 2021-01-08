@@ -11,8 +11,8 @@ namespace HeThongATM.Data
     {
         public static Dictionary<string, KhachHang> dtnKhachHang = new Dictionary<string, KhachHang>()
         {
-            {"dat" , new KhachHang("dat", "123456", 1000000)},
-            {"phuong" , new KhachHang("phuong", "654321", 1000000)}
+            {"123456789" , new KhachHang("123456789", "123456", 1000000)},
+            {"012345678" , new KhachHang("012345678", "654321", 1000000)}
         };
 
 

@@ -26,7 +26,7 @@ namespace HeThongATM.Class
 
         public void ThemTien(int amount)
         {
-            SoDu -= amount;
+            SoDu += amount;
         }
     }
 }

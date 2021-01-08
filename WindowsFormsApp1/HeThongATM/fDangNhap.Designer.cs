@@ -33,6 +33,8 @@
             this.tbMaThe = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.tbMaPin = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnDangNhap
@@ -60,6 +62,7 @@
             this.tbMaThe.Name = "tbMaThe";
             this.tbMaThe.Size = new System.Drawing.Size(170, 20);
             this.tbMaThe.TabIndex = 2;
+            this.tbMaThe.Text = "123456789";
             // 
             // label2
             // 
@@ -78,12 +81,33 @@
             this.tbMaPin.TabIndex = 4;
             this.tbMaPin.UseSystemPasswordChar = true;
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(164, 58);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(198, 13);
+            this.label4.TabIndex = 6;
+            this.label4.Text = "TamPayBank xin kính chào quý khách !";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(197, 9);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(128, 13);
+            this.label3.TabIndex = 7;
+            this.label3.Text = "MÀN HÌNH ĐĂNG NHẬP";
+            // 
             // fDangNhap
             // 
             this.AcceptButton = this.btnDangNhap;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.ClientSize = new System.Drawing.Size(505, 299);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.tbMaPin);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.tbMaThe);
@@ -104,6 +128,8 @@
         private System.Windows.Forms.TextBox tbMaThe;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox tbMaPin;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
     }
 }
 

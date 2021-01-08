@@ -30,7 +30,9 @@ namespace HeThongATM
                 return;
             }
 
-            MessageBox.Show("dang nhap thanh cong", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            fMain main = new fMain();
+            main.Show();
+            this.Hide();
         }
 
         private void fDangNhap_FormClosing(object sender, FormClosingEventArgs e)

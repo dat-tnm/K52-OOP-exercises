@@ -8,11 +8,6 @@ namespace HeThongATM.Class
 {
     static class ATMsystem
     {
-        public static int SoLuongTo50k = 100000000;
-        public static int SoLuongTo100k = 100000000;
-        public static int SoLuongTo200k = 100000000;
-        public static int SoLuongTo500k = 100000000;
-
         public static KhachHang KHDangNhap = null;
 
         public static bool DangNhap(string maThe, string maPin, out string message)
@@ -42,7 +37,7 @@ namespace HeThongATM.Class
                 return false;
             }
 
-            if (amount - KHDangNhap.SoDu < 50000)
+            if (KHDangNhap.SoDu - amount < 50000)
             {
                 message = "Số dư không đủ, số dư tối thiểu phải có trong tài khoản là 50.000đ, bạn không thể rút!";
                 return false;
@@ -61,9 +56,15 @@ namespace HeThongATM.Class
                 return false;
             }
 
-            if (amount - KHDangNhap.SoDu < 50000)
+            if (KHDangNhap.SoDu - amount < 50000)
             {
                 message = "Số dư không đủ, số dư tối thiểu phải có trong tài khoản là 50.000đ, bạn không thể chuyển!";
+                return false;
+            }
+
+            if (Data.Data.dtnKhachHang.ContainsKey(maTheNhan))
+            {
+                message = "Mã thẻ nhận không tồn tại";
                 return false;
             }
 
@@ -97,6 +98,15 @@ namespace HeThongATM.Class
             KHDangNhap = null;
         }
 
+        public static bool KiemTraMaPin(string maPin)
+        {
+            if (KHDangNhap.MaPin == maPin)
+            {
+                return true;
+            }
+
+            return false;
+        }
     }
 
 
