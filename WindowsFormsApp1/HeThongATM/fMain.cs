@@ -133,18 +133,29 @@ namespace HeThongATM
 
             if (message != null)
                 MessageBox.Show(message, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            else
+            {
+                lbTieuDe.Text = "Thành công";
+
+                for (int i = 0; i < listLabel.Count; i++)
+                {
+                    listLabel[i].Hide();
+                    listTextbox[i].Hide();
+                }
+                button1.Hide();
+                button2.Hide();
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
+            lbTieuDe.Text = "Hãy chọn tác vụ";
+
             for (int i = 0; i < listLabel.Count; i++)
             {
                 listLabel[i].Hide();
                 listTextbox[i].Hide();
-
-                lbTieuDe.Text = "Hãy chọn tác vụ";
             }
-
             button1.Hide();
             button2.Hide();
         }

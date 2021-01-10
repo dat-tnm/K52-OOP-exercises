@@ -39,7 +39,7 @@ namespace HeThongATM.Class
 
             if (KHDangNhap.SoDu - amount < 50000)
             {
-                message = "Số dư không đủ, số dư tối thiểu phải có trong tài khoản là 50.000đ, bạn không thể rút!";
+                message = "Số dư không đủ, số dư tối thiểu phải có trong tài khoản là 50.000đ !";
                 return false;
             }
 
@@ -50,21 +50,27 @@ namespace HeThongATM.Class
 
         public static bool ChuyenTien(int amount, string maTheNhan, out string message)
         {
-            if (amount < 0)
+            if (!Data.Data.dtnKhachHang.ContainsKey(maTheNhan))
             {
-                message = "Lỗi! số tiền chuyển phải lớn hơn 0  !";
+                message = "Mã thẻ nhận không tồn tại";
+                return false;
+            }
+
+            if (maTheNhan == KHDangNhap.MaThe)
+            {
+                message = "Mã thẻ nhận phải khác mã thẻ chuyển tiền";
+                return false;
+            }
+
+            if (amount < 50000)
+            {
+                message = "Số tiền chuyển tối thiểu là 50.000đ !";
                 return false;
             }
 
             if (KHDangNhap.SoDu - amount < 50000)
             {
-                message = "Số dư không đủ, số dư tối thiểu phải có trong tài khoản là 50.000đ, bạn không thể chuyển!";
-                return false;
-            }
-
-            if (Data.Data.dtnKhachHang.ContainsKey(maTheNhan))
-            {
-                message = "Mã thẻ nhận không tồn tại";
+                message = "Số dư không đủ, số dư tối thiểu phải có trong tài khoản là 50.000đ !";
                 return false;
             }
 
