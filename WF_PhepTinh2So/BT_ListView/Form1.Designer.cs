@@ -38,11 +38,14 @@
             this.btnGiamDan = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.tbDiemTB = new System.Windows.Forms.TextBox();
+            this.btnChen = new System.Windows.Forms.Button();
+            this.btnSua = new System.Windows.Forms.Button();
+            this.btnXoa = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnNhap
             // 
-            this.btnNhap.Location = new System.Drawing.Point(258, 4);
+            this.btnNhap.Location = new System.Drawing.Point(12, 120);
             this.btnNhap.Name = "btnNhap";
             this.btnNhap.Size = new System.Drawing.Size(75, 23);
             this.btnNhap.TabIndex = 0;
@@ -68,17 +71,20 @@
             // 
             // listView1
             // 
+            this.listView1.FullRowSelect = true;
+            this.listView1.GridLines = true;
             this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(15, 67);
+            this.listView1.Location = new System.Drawing.Point(12, 171);
             this.listView1.Name = "listView1";
             this.listView1.Size = new System.Drawing.Size(339, 242);
             this.listView1.TabIndex = 3;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
+            this.listView1.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
             // 
             // btnLonNhat
             // 
-            this.btnLonNhat.Location = new System.Drawing.Point(15, 315);
+            this.btnLonNhat.Location = new System.Drawing.Point(12, 429);
             this.btnLonNhat.Name = "btnLonNhat";
             this.btnLonNhat.Size = new System.Drawing.Size(75, 23);
             this.btnLonNhat.TabIndex = 4;
@@ -88,7 +94,7 @@
             // 
             // btnNhoNhat
             // 
-            this.btnNhoNhat.Location = new System.Drawing.Point(96, 315);
+            this.btnNhoNhat.Location = new System.Drawing.Point(93, 429);
             this.btnNhoNhat.Name = "btnNhoNhat";
             this.btnNhoNhat.Size = new System.Drawing.Size(75, 23);
             this.btnNhoNhat.TabIndex = 5;
@@ -98,7 +104,7 @@
             // 
             // btnTangDan
             // 
-            this.btnTangDan.Location = new System.Drawing.Point(177, 315);
+            this.btnTangDan.Location = new System.Drawing.Point(174, 429);
             this.btnTangDan.Name = "btnTangDan";
             this.btnTangDan.Size = new System.Drawing.Size(75, 23);
             this.btnTangDan.TabIndex = 6;
@@ -108,7 +114,7 @@
             // 
             // btnGiamDan
             // 
-            this.btnGiamDan.Location = new System.Drawing.Point(258, 315);
+            this.btnGiamDan.Location = new System.Drawing.Point(255, 429);
             this.btnGiamDan.Name = "btnGiamDan";
             this.btnGiamDan.Size = new System.Drawing.Size(75, 23);
             this.btnGiamDan.TabIndex = 7;
@@ -132,12 +138,45 @@
             this.tbDiemTB.Size = new System.Drawing.Size(160, 20);
             this.tbDiemTB.TabIndex = 9;
             // 
+            // btnChen
+            // 
+            this.btnChen.Location = new System.Drawing.Point(93, 120);
+            this.btnChen.Name = "btnChen";
+            this.btnChen.Size = new System.Drawing.Size(75, 23);
+            this.btnChen.TabIndex = 10;
+            this.btnChen.Text = "Chèn";
+            this.btnChen.UseVisualStyleBackColor = true;
+            this.btnChen.Click += new System.EventHandler(this.btnChen_Click);
+            // 
+            // btnSua
+            // 
+            this.btnSua.Location = new System.Drawing.Point(174, 120);
+            this.btnSua.Name = "btnSua";
+            this.btnSua.Size = new System.Drawing.Size(75, 23);
+            this.btnSua.TabIndex = 11;
+            this.btnSua.Text = "Sửa";
+            this.btnSua.UseVisualStyleBackColor = true;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
+            // 
+            // btnXoa
+            // 
+            this.btnXoa.Location = new System.Drawing.Point(255, 120);
+            this.btnXoa.Name = "btnXoa";
+            this.btnXoa.Size = new System.Drawing.Size(75, 23);
+            this.btnXoa.TabIndex = 12;
+            this.btnXoa.Text = "Xóa";
+            this.btnXoa.UseVisualStyleBackColor = true;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
+            // 
             // Form1
             // 
             this.AcceptButton = this.btnNhap;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(402, 373);
+            this.ClientSize = new System.Drawing.Size(402, 464);
+            this.Controls.Add(this.btnXoa);
+            this.Controls.Add(this.btnSua);
+            this.Controls.Add(this.btnChen);
             this.Controls.Add(this.tbDiemTB);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnGiamDan);
@@ -168,6 +207,9 @@
         private System.Windows.Forms.Button btnGiamDan;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox tbDiemTB;
+        private System.Windows.Forms.Button btnChen;
+        private System.Windows.Forms.Button btnSua;
+        private System.Windows.Forms.Button btnXoa;
     }
 }
 

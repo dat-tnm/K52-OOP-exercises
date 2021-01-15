@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WF_PhuongTrinhBac2", "WF_Ph
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BT_ListView", "BT_ListView\BT_ListView.csproj", "{FD6245D6-8987-4087-9836-0F128CDFC0A6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuanLyDiem", "QuanLyDiem\QuanLyDiem.csproj", "{D5B35EE5-C1AE-4646-9BDD-2CC33DEC409C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{FD6245D6-8987-4087-9836-0F128CDFC0A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FD6245D6-8987-4087-9836-0F128CDFC0A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FD6245D6-8987-4087-9836-0F128CDFC0A6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D5B35EE5-C1AE-4646-9BDD-2CC33DEC409C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D5B35EE5-C1AE-4646-9BDD-2CC33DEC409C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D5B35EE5-C1AE-4646-9BDD-2CC33DEC409C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D5B35EE5-C1AE-4646-9BDD-2CC33DEC409C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

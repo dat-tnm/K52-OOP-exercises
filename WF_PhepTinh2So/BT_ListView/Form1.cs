@@ -20,7 +20,7 @@ namespace BT_ListView
 
         SinhVien[] DSSV;
         float[] Mang;
-        int i = 0;
+        int n = 0;
 
 
         public Form1()
@@ -31,7 +31,7 @@ namespace BT_ListView
         private void Form1_Load(object sender, EventArgs e)
         {
             DSSV = new SinhVien[10];
-            Mang = new float[10];
+            //Mang = new float[10];
 
             tbHoTen.Focus();
             listView1.Columns.Add("STT", 50);
@@ -47,15 +47,21 @@ namespace BT_ListView
                 return;
             }
 
-            int STT = i + 1;
-            DSSV[i].HoTen = tbHoTen.Text;
-            DSSV[i].DTB = float.Parse(tbDiemTB.Text);
+            int STT = n + 1;
+            DSSV[n].HoTen = tbHoTen.Text;
+            try
+            {
+                DSSV[n].DTB = float.Parse(tbDiemTB.Text);
+            }
+            catch (Exception) { return; }
+
             ListViewItem item = new ListViewItem(STT.ToString());
             item.SubItems.Add(tbHoTen.Text);
             item.SubItems.Add(tbDiemTB.Text);
             listView1.Items.Add(item);
             tbDiemTB.Clear();
             tbHoTen.Clear(); tbHoTen.Focus();
+            n++;
 
             //Mang[i] = float.Parse(tbHoTen.Text);
             //listView1.Items.Add(tbHoTen.Text);
@@ -63,6 +69,7 @@ namespace BT_ListView
             //tbHoTen.Clear(); tbHoTen.Focus();
         }
 
+        #region bottom buttons
         private void btnLonNhat_Click(object sender, EventArgs e)
         {
 
@@ -82,6 +89,97 @@ namespace BT_ListView
         {
 
         }
+        #endregion
+        private void btnChen_Click(object sender, EventArgs e)
+        {
+            SinhVien svChen;
+            int viTri = 0;
+            svChen.HoTen = tbHoTen.Text;
+            try
+            {
+                svChen.DTB = float.Parse(tbDiemTB.Text);
+            }
+            catch (Exception) { return; }
 
+            int i;
+            for (i = 0; i < n; i++)
+            {
+                if (DSSV[i].DTB > svChen.DTB)
+                    break;
+            }
+            viTri = i;
+            if (viTri == n)
+            {
+                DSSV[n] = svChen;
+            }
+            else
+            {
+                for (int j = n; j > viTri; j--)
+                    DSSV[j] = DSSV[j - 1];
+                DSSV[viTri] = svChen;
+            }
+            n++;
+            LoadListView();
+        }
+
+        private void btnSua_Click(object sender, EventArgs e)
+        {
+            if (listView1.SelectedItems.Count != 0)
+            {
+                int viTri = listView1.SelectedItems[0].Index;
+                try
+                {
+                    DSSV[viTri].DTB = float.Parse(tbDiemTB.Text);
+                }
+                catch (Exception) { return; }
+                DSSV[viTri].HoTen = tbHoTen.Text;
+                listView1.SelectedItems[0].SubItems[1].Text = tbHoTen.Text;
+                listView1.SelectedItems[0].SubItems[2].Text = tbDiemTB.Text;
+            }
+        }
+
+        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (listView1.SelectedItems.Count != 0)
+            {
+                tbHoTen.Text = listView1.SelectedItems[0].SubItems[1].Text;
+                tbDiemTB.Text = listView1.SelectedItems[0].SubItems[2].Text;
+            }
+        }
+
+        void LoadListView()
+        {
+            listView1.Items.Clear();
+            for (int i = 0; i < n; i++)
+            {
+                ListViewItem item = new ListViewItem((i + 1).ToString());
+                item.SubItems.Add(DSSV[i].HoTen);
+                item.SubItems.Add(DSSV[i].DTB.ToString());
+                listView1.Items.Add(item);
+            }
+        }
+
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+            if (listView1.SelectedItems.Count == 0)
+            {
+                return;
+            }
+
+            DialogResult key = MessageBox.Show("Bạn muốn xóa trường này ?", "Cảnh báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (key == DialogResult.No)
+            {
+                return;
+            }
+
+            int viTriXoa = listView1.SelectedItems[0].Index;
+            int i=0;
+            while (i < viTriXoa)
+                i++;
+            for (int j = i; j < n; j++)
+                DSSV[j] = DSSV[j + 1];
+            n--;
+            LoadListView();
+        }
     }
 }
