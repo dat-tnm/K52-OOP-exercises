@@ -20,7 +20,7 @@ namespace TinhLuong.Model
 
         public virtual double TinhLuongThang()
         {
-            return (Luong * SoNgayLamViec / 26);
+            return Math.Round((Luong * SoNgayLamViec / 26));
         }
 
         public virtual double TinhTongLuong()

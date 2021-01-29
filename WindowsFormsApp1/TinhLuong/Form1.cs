@@ -48,9 +48,9 @@ namespace TinhLuong
                 item.SubItems.Add(listNhanVien[i].NgaySinh.ToShortDateString());
                 item.SubItems.Add(listNhanVien[i].PhongBan);
                 item.SubItems.Add(listNhanVien[i].ChucVu);
-                item.SubItems.Add(listNhanVien[i].TinhLuongThang().ToString());
-                item.SubItems.Add(listNhanVien[i].TinhPhuCap().ToString());
-                item.SubItems.Add(listNhanVien[i].TinhTongLuong().ToString());
+                item.SubItems.Add(listNhanVien[i].TinhLuongThang().ToString("0,0"));
+                item.SubItems.Add(listNhanVien[i].TinhPhuCap().ToString("0,0"));
+                item.SubItems.Add(listNhanVien[i].TinhTongLuong().ToString("0,0"));
 
                 listView1.Items.Add(item);
                 tongLuong += listNhanVien[i].TinhLuongThang();
@@ -58,9 +58,9 @@ namespace TinhLuong
             }
 
             tongChiTien = tongLuong + tongPhuCap;
-            tbTongLuong.Text = tongLuong.ToString();
-            tbTongPhuCap.Text = tongPhuCap.ToString();
-            tbTongChiTien.Text = tongChiTien.ToString();
+            tbTongLuong.Text = tongLuong.ToString("0,0");
+            tbTongPhuCap.Text = tongPhuCap.ToString("0,0");
+            tbTongChiTien.Text = tongChiTien.ToString("0,0");
         }
 
         private void listView1_SelectedIndexChanged(object sender, EventArgs e)
