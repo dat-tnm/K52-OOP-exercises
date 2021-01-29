@@ -171,5 +171,56 @@ namespace TinhLuong
             n--;
             LoadListView();
         }
+
+        private void btnSapXepHoTen_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i < n ; i++)
+            {
+                var hasChanged = false;
+                for (int j = 0; j < n - i; j++)
+                {
+                    var clgt = listNhanVien[j].HoTen.CompareTo(listNhanVien[j + 1].HoTen);
+                    if ( clgt == 1 )
+                    {
+                        var temp = listNhanVien[j];
+                        listNhanVien[j] = listNhanVien[j + 1];
+                        listNhanVien[j + 1] = temp;
+                        hasChanged = true;
+                    }
+                }
+
+                if (!hasChanged)
+                {
+                    break;
+                }
+            }
+
+            LoadListView();
+        }
+
+        private void btnSapXepTongLuong_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i < n; i++)
+            {
+                var hasChanged = false;
+                for (int j = 0; j < n - i; j++)
+                {
+                    if (listNhanVien[j].TinhTongLuong() > listNhanVien[j + 1].TinhTongLuong())
+                    {
+                        var temp = listNhanVien[j];
+                        listNhanVien[j] = listNhanVien[j + 1];
+                        listNhanVien[j + 1] = temp;
+                        hasChanged = true;
+                    }
+                }
+
+                if (!hasChanged)
+                {
+                    break;
+                }
+            }
+
+            LoadListView();
+        }
     }
 }

@@ -52,6 +52,8 @@
             this.btnXoa = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
+            this.btnSapXepHoTen = new System.Windows.Forms.Button();
+            this.btnSapXepTongLuong = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -261,11 +263,33 @@
             this.label10.TabIndex = 25;
             this.label10.Text = "Tổng lương:";
             // 
+            // btnSapXepHoTen
+            // 
+            this.btnSapXepHoTen.Location = new System.Drawing.Point(15, 110);
+            this.btnSapXepHoTen.Name = "btnSapXepHoTen";
+            this.btnSapXepHoTen.Size = new System.Drawing.Size(159, 23);
+            this.btnSapXepHoTen.TabIndex = 26;
+            this.btnSapXepHoTen.Text = "Sắp xếp theo HoTen";
+            this.btnSapXepHoTen.UseVisualStyleBackColor = true;
+            this.btnSapXepHoTen.Click += new System.EventHandler(this.btnSapXepHoTen_Click);
+            // 
+            // btnSapXepTongLuong
+            // 
+            this.btnSapXepTongLuong.Location = new System.Drawing.Point(180, 110);
+            this.btnSapXepTongLuong.Name = "btnSapXepTongLuong";
+            this.btnSapXepTongLuong.Size = new System.Drawing.Size(159, 23);
+            this.btnSapXepTongLuong.TabIndex = 27;
+            this.btnSapXepTongLuong.Text = "Sắp xếp theo Tổng Lương";
+            this.btnSapXepTongLuong.UseVisualStyleBackColor = true;
+            this.btnSapXepTongLuong.Click += new System.EventHandler(this.btnSapXepTongLuong_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnSapXepTongLuong);
+            this.Controls.Add(this.btnSapXepHoTen);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.btnXoa);
@@ -323,6 +347,8 @@
         private System.Windows.Forms.Button btnXoa;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Button btnSapXepHoTen;
+        private System.Windows.Forms.Button btnSapXepTongLuong;
     }
 }
 
